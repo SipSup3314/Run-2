@@ -24,9 +24,14 @@
 			fileType: 2
 		};
 		/* MORE Settings */
+		if(window.location.href.endsWith("/")){
+			var theUrlForRealz = window.location.href + 'swf/Run2.swf';
+		} else {
+			var theUrlForRealz = window.location.href + '/swf/Run2.swf';
+		}
 		try{
 				// GAME.src = 'http://localhost:5000/swf/Run2.swf';
-				GAME.src = './swf/Run2.swf';
+				GAME.src = theUrlForRealz;
 				GAME.fileType = 1;
 		}catch(e){
 			console.warn(e);
